@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+</head>
+{{> src/templates/styles}}
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>{{shop.name}}</h1>
+            <p>{{shop.address}}</p>
+            <p>{{shop.phone}}</p>
+            <p>{{shop.email}}</p>
+        </div>
+        <table class="invoice-details">
+            <tbody>
+                <tr>
+                    <td>
+                        <h2>Bill To: </h2>
+                        <p>{{customer.name}}</p>
+                        <p>{{customer.address}}</p>
+                        <p>{{customer.mobile}}</p>
+                        <p>{{customer.email}}</p>
+                    </td>
+                    <td>
+                        <h2>GSTIN No:</h2>
+                        <p>{{shop.gstin}}</p>
+                        <h2>Invoice No: </h2>
+                        <p>{{invoice.id}}</p>
+                        <h2>Invoice Date: </h2>
+                        <p>{{invoice.date}}</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="item-table">
+            <thead>
+                <tr >
+                    <th>Item</th>
+                    <th>Weight</th>
+                    <th>Rate / 10 gm</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each items}}
+                <tr>
+                    <td>{{type}} {{name}}</td>
+                    <td>{{weight}} {{unit}}</td>
+                    <td>{{rate}} </td>
+                    <td>{{amount}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <table class="billing-details">
+            <tbody>
+                <tr>
+                    <td>
+                        <h2>Amount : </h2>
+                        <h2>Discount : </h2>
+                        {{#if invoice.gst}}
+                        <h2>SGST : </h2>
+                        <h2>CGST</h2>
+                        {{/if}}
+                        <h2>Total : </h2>
+                        <h2>Recieved:</h2>
+                        <h2>By Balance:</h2>
+                    </td>
+                    <td>
+                        <h2>{{invoice.amount}}</h2>
+                        <h2>{{invoice.discount}}</h2>
+                        {{#if invoice.gst}}
+                        <h2>{{invoice.sgst_amount}} ({{invoice.sgst_rate}}%)</h2>
+                        <h2>{{invoice.cgst_amount}} ({{invoice.cgst_rate}}%)</h2>
+                        {{/if}}
+                        <h2>{{invoice.total_amount}}</h2>
+                        <h2>{{invoice.received_amount}}</h2>
+                        <h2>{{invoice.balance_amount}}</h2>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="footer">
+            <tbody>
+                <tr>
+                    <td>
+                        <h2>Payment Method</h2>
+                        <p>{{invoice.payment_type}}</p>
+                    </td>
+                    <td>
+                        <h2>Notes </h2>
+                        <p>{{invoice.notes}}</p>
+                    </td>
+                    <td>
+                        <h2>Authorized Signature</h2>
+                        <div></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

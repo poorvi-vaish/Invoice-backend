@@ -1,0 +1,13 @@
+{
+  "shop": {
+    "name": "Satish Abhushan Kendra",
+    "address": "Pachraha, Gwalior Road, Etawah, Uttar Pradesh 206001",
+    "phone": "+91-9548863565",
+    "email": "gireshjain5557@gmail.com",
+    "gstin": "09AABCS"
+  },
+  "currency": "INR",
+  "customer": {},
+  "invoice": {},
+  "items": []
+}

@@ -1,0 +1,120 @@
+<style>
+    :root {
+        --font-s-small: 10pt;
+        --font-s-normal: 11pt;
+        --font-s-mid: 12pt;
+        --font-s-large: 12pt;
+        /* Kerning */
+        --ltr-spc-200: 0.2em;
+        --ltr-spc-100:
+            0.1em;
+        --ltr-spc-020: 0.02em;
+        --ltr-spc-025: 0.025em;
+    }
+
+    html,
+    body {
+        height:
+            100vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        height: 100%;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+    }
+
+    .header {
+        width: 100%;
+        text-align: center;
+    }
+
+    table {
+        width: 80%;
+        margin-bottom: 2em;
+    }
+
+    .invoice-details td {
+        width: 50%;
+    }
+
+    .invoice-details td h2 {
+        margin-bottom: 0;
+    }
+
+    .invoice-details td p {
+        margin-top: 0.7em;
+    }
+
+    .invoice-details td:nth-child(2) {
+        text-align: right;
+    }
+
+    .billing-details {
+        text-align: right;
+        margin-bottom: 0;
+    }
+
+    .billing-details td:nth-child(1) {
+        text-align: left;
+        font-size: var(--font-s-mid);
+    }
+
+    .billing-details td:nth-child(2) h2 {
+        font-weight: 400;
+        margin-left: 2em;
+    }
+
+    .item-table {
+        width: 80%;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    .item-table {
+        border: 1px solid black;
+        
+    }
+
+        width: 40%;
+    .item-head th {
+        border: 1px solid black;
+        border-right: 1px  solid black;
+
+    }
+
+  
+    .item-table td,
+    th {
+        padding: 10px 10px;
+        border-right: 1px solid black;
+        border-left: 1px solid black;
+    }
+
+    .item-table tr:last-child{
+        border-bottom: 1px solid black;
+    }
+
+    .footer {
+        border: 1px solid white;
+        padding: 10px 20px;
+    }
+
+    .footer td {
+        width: 50%;
+    }
+
+    .footer td:nth-child(2) {
+        text-align: right;
+        min-height: 200px;
+    }
+
+    .footer td div {
+        min-height: 50px;
+    }
+</style>

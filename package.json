@@ -1,0 +1,59 @@
+{
+  "name": "simpleshop-backend",
+  "version": "1.0.0",
+  "description": "Response Format specified in /utils/response.js",
+  "main": "build/index.js",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.234.0",
+    "@types/bcrypt": "^3.0.0",
+    "@types/cors": "^2.8.7",
+    "@types/express": "^4.17.7",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@types/node": "^8.0.29",
+    "@types/uuid": "^8.3.0",
+    "aws-sdk": "^2.1278.0",
+    "bcrypt": "^5.0.0",
+    "cachedfs": "^0.3.3",
+    "class-transformer": "^0.3.1",
+    "class-validator": "^0.12.2",
+    "cors": "^2.8.5",
+    "express": "^4.15.4",
+    "handlebars": "^4.7.7",
+    "html-pdf-node": "^1.0.8",
+    "jsonwebtoken": "^8.5.1",
+    "nodemailer": "^6.4.17",
+    "pdfjs": "^2.4.7",
+    "pg": "^8.3.0",
+    "pg-hstore": "^2.3.3",
+    "reflect-metadata": "^0.1.10",
+    "sequelize": "^6.3.4",
+    "typeorm": "0.2.25",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "@types/html-pdf-node": "^1.0.0",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.4",
+    "ts-node": "^10.9.1"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "nodemon",
+    "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js",
+    "start": "ts-node -r dotenv/config src/index.ts",
+    "prod": "ts-node src/index.ts --transpile-only"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manishprivet/simpleshop-backend.git"
+  },
+  "keywords": [
+    "Supply Chain"
+  ],
+  "author": "manishprivet@protonmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manishprivet/simpleshop-backend/issues"
+  },
+  "homepage": "https://github.com/manishprivet/simpleshop-backend#readme"
+}
